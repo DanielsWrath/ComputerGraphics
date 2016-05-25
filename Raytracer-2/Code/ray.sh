@@ -1,0 +1,11 @@
+make ./ray
+./ray scenefiles/scene02.yaml
+./ray scenefiles/scene01-phong.yaml
+./ray scenefiles/scene01-normal.yaml
+./ray scenefiles/scene01-zbuffer.yaml
+./ray scenefiles/scene01-ss.yaml
+./ray scenefiles/scene01-camera-ss-reflect-lights-shadows.yaml
+./ray scenefiles/scene01-zoom-ss-reflect-lights-shadows.yaml
+./ray scenefiles/scene01-reflect-lights-shadows.yaml
+./ray scenefiles/scene01-lights-shadows.yaml
+./ray scenefiles/scene01-shadows.yaml

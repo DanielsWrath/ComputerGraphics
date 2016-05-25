@@ -1,0 +1,33 @@
+Assignment 1: Raytracer 1
+=========================
+
+The code as it is now will show objects with simple shading, and 
+the ambient and specular parts of Phong's lightning models.
+It is also able to create Z-buffer images and Normal buffer images.
+These different tasks can be used for spheres, planes and quads and 
+makes use of the given framework. Below there will be a description
+of the files which are edited.
+
+Authors: Robin Entjes and Daniel Haitink
+
+Description of the edited file
+------------------------------
+
+sphere.cpp/.h
+:	In this file formulas are added to calculate the distance from 
+	the ray origin to the center of the sphere and a formula that determines 
+	if the ray hits the sphere, and if so where. If it is a 
+	hit it determines whether it hits one or twice and determines this point(s)
+	locations. If all this is done, the distance to the intersection is 			calculated and the normal is too.
+
+scene.cpp/.h
+:	The scene sends all the rays and checks if the objects in the scene will 		intersect with it. If an object returns that it does intersect, the color 		will be calculated using the phong shading model. It is also possible to 		create a normal buffer image and a z buffer image. For every image, the same 	intersect method of the objects are used.
+
+raytracer.cpp/.h
+:	The yaml parser is altered to accept planes and triangles. It also determines 	which image the scene should generate.
+
+plane.cpp/.h
+:	The plane exists out of four point and six min/max variables. For the 		intersection, the normal is calculated using a cross product. This is then 		used to calculate if the ray intersects the plane. It is possible to create a 	finite plane, which respects the max and min coordinates.
+
+triangle.cpp/.h
+:	A triangle exists out of three Points, and it is calculated using the Möller–	Trumbore intersection algorithm. This projects the triangle into another 		coordinate system, which is then used to see if the ray intersects the 		triangle. It also calculates the distance to intersection and the normals of 	the triangle (which is the same calculation as the plane).

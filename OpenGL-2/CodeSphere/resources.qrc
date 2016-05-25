@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>shaders/fragment.glsl</file>
+        <file>shaders/vertex.glsl</file>
+        <file>models/sphere.obj</file>
+        <file>models/cube.obj</file>
+        <file>textures/earth.png</file>
+        <file>textures/Small/venus.png</file>
+        <file>textures/sun.png</file>
+        <file>textures/Small/jupiter.png</file>
+        <file>textures/Small/mars.png</file>
+        <file>textures/Small/mercury.png</file>
+        <file>textures/Small/moon.png</file>
+        <file>textures/Small/neptune.png</file>
+        <file>textures/Small/pluto.png</file>
+        <file>textures/Small/saturn.png</file>
+        <file>textures/Small/uranus.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,22 @@
+m_sqVAO.create();
+m_sqVAO.bind();
+
+// Create a simple square VAO for rendering a plain texture
+QVector<QVector3D> sq;
+sq.append(QVector3D(-1.0f,-1.0f,0.0f));
+sq.append(QVector3D(1.0f,1.0f,0.0f));
+sq.append(QVector3D(-1.0f,1.0f,0.0f));
+
+sq.append(QVector3D(-1.0f,-1.0f,0.0f));
+sq.append(QVector3D(1.0f,-1.0f,0.0f));
+sq.append(QVector3D(1.0f,1.0f,0.0f));
+
+m_sqVBO = new  QOpenGLBuffer(QOpenGLBuffer::VertexBuffer);
+m_sqVBO->create();
+m_sqVBO->bind();
+m_sqVBO->allocate(sq.data(),sq.size() * sizeof(sq[0]));
+
+glEnableVertexAttribArray(0);
+glVertexAttribPointer(0,3,GL_FLOAT,GL_FALSE,0,0);
+
+m_sqVAO.release();
